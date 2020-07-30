@@ -1,0 +1,34 @@
+{
+	"name": "spaten-parser",
+	"description": "Parse Spaten-encoded geodata.",
+	"version": "1.0.0",
+	"main": "index.js",
+	"files": [
+		"index.js",
+		"example.js"
+	],
+	"keywords": [
+		"spaten",
+		"geodata",
+		"gis"
+	],
+	"author": "Jannis R <mail@jannisr.de>",
+	"homepage": "https://github.com/derhuerst/spaten-parser",
+	"repository": "derhuerst/spaten-parser",
+	"bugs": "https://github.com/derhuerst/spaten-parser/issues",
+	"license": "ISC",
+	"engines": {
+		"node": ">=12"
+	},
+	"dependencies": {},
+	"devDependencies": {
+		"eslint": "^7.5.0",
+		"tap-min": "^2.0.0",
+		"tape": "^5.0.1"
+	},
+	"scripts": {
+		"test": "env NODE_ENV=dev node test/index.js | tap-min",
+		"lint": "eslint .",
+		"prepublishOnly": "npm test && npm run lint"
+	}
+}
