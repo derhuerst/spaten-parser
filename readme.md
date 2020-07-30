@@ -20,8 +20,17 @@ npm install spaten-parser
 ## Usage
 
 ```js
-// todo
+const {readFileSync} = require('fs')
+const parse = require('spaten-parser')
+
+const buf = readFileSync('path/to/file.spaten')
+
+for (const item of parse(buf)) {
+	console.log(item)
+}
 ```
+
+`parse` is a [generator function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function*), so it returns an [iterator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#iterator).
 
 
 ## Contributing
