@@ -8,3 +8,6 @@ pnpm-debug.log
 /package-lock.json
 /yarn.lock
 /shrinkwrap.yaml
+
+/lib/spaten_v0.proto
+/lib/spaten_v0.js

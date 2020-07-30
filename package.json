@@ -5,6 +5,7 @@
 	"main": "index.js",
 	"files": [
 		"index.js",
+		"lib",
 		"example.js"
 	],
 	"keywords": [
@@ -20,15 +21,18 @@
 	"engines": {
 		"node": ">=12"
 	},
-	"dependencies": {},
+	"dependencies": {
+		"pbf": "^3.2.1"
+	},
 	"devDependencies": {
 		"eslint": "^7.5.0",
 		"tap-min": "^2.0.0",
 		"tape": "^5.0.1"
 	},
 	"scripts": {
+		"build": "./build.sh",
 		"test": "env NODE_ENV=dev node test/index.js | tap-min",
 		"lint": "eslint .",
-		"prepublishOnly": "npm test && npm run lint"
+		"prepublishOnly": "npm run build && npm test && npm run lint"
 	}
 }
